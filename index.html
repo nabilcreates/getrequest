@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>getrequest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -16,12 +17,11 @@
         <input type="text" v-model='url'>
         <button @click='getApi(url)'>GET</button>
 
-        <pre>{{apidata.body}}</pre>
+        <pre><code>{{apidata.body}}</code></pre>
 
     </div>
 
     <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
