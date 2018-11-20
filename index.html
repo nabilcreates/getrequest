@@ -14,13 +14,16 @@
 
     <div class="app">
 
-        <input type="text" v-model='url' class="form-control">
-        <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})' >GET</button>
-        <pre><code>{{apidata.body}}</code></pre>
+        <div class="container">
+            <input type="text" v-model='url' class="form-control">
+            <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
+            <pre><code>{{apidata.body}}</code></pre>
+        </div>
 
     </div>
 
     <script src="./node_modules/vue/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
