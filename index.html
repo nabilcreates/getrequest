@@ -15,10 +15,26 @@
     <div class="app">
 
         <div class="container">
-            <input type="text" v-model='url' class="form-control">
-            <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
+
+            <div class="header">
+                <div class="form-group">
+                    <input type="text" v-model='url' class="form-control">
+                    <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
+                </div>
+            </div>
+
+            <h3>Body</h3>
             <pre><code>{{apidata.body}}</code></pre>
+
+
+            <h3>Valid Keys:</h3>
+            <ul>
+                <li v-for='item in Object.keys(apidata.body)'>{{item}}</li>
+            </ul>
+
         </div>
+
+
 
     </div>
 
