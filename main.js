@@ -1,7 +1,7 @@
 let app = new Vue({
     el: ".app",
-    data(){
-        return{
+    data() {
+        return {
             url: 'https://api.github.com/users/renabil',
             apidata: {
                 body: '',
@@ -10,16 +10,16 @@ let app = new Vue({
     },
 
     methods: {
-        getApi(link){
-            fetch(link , {
-                method: 'GET',
-            })
-            .then(response => response.json())
-            .then(json => this.apidata.body = json)
+        getApi(link, options = {
+            method: 'GET',
+        }) {
+            fetch(link, options)
+                .then(response => response.json())
+                .then(json => this.apidata.body = json)
         }
     },
 
-    created(){
+    created() {
         this.getApi(this.url)
     }
 })
