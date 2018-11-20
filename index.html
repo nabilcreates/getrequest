@@ -29,7 +29,11 @@
 
             <h3>Valid Keys:</h3>
             <ul>
-                <li v-for='item in Object.keys(apidata.body)'>{{item}}</li>
+                <li v-for='item in Object.keys(apidata.body)'>
+                    <span class="key">{{item}}</span>:
+                    <br>
+                    {{apidata.body[item]}}
+                </li>
             </ul>
 
         </div>
