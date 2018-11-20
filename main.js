@@ -11,7 +11,9 @@ let app = new Vue({
 
     methods: {
         getApi(link){
-            fetch(link)
+            fetch(link , {
+                method: 'GET',
+            })
             .then(response => response.json())
             .then(json => this.apidata.body = json)
         }
