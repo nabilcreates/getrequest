@@ -14,7 +14,8 @@
 
     <div class="app">
 
-        <input type="text" v-model='url' class="form-control" @input='getApi(url)'>
+        <input type="text" v-model='url' class="form-control">
+        <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})' >GET</button>
         <pre><code>{{apidata.body}}</code></pre>
 
     </div>
