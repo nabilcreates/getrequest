@@ -13,9 +13,18 @@ let app = new Vue({
         getApi(link, options = {
             method: 'GET',
         }) {
-            fetch(link, options)
+            
+            // if http found in link
+            if(link.indexOf('http') >= 0){
+                fetch(`${link}`, options)
                 .then(response => response.json())
                 .then(json => this.apidata.body = json)
+            }else{
+                fetch(`https://${link}`, options)
+                .then(response => response.json())
+                .then(json => this.apidata.body = json)
+            }
+            
         }
     },
 
