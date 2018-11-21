@@ -13,22 +13,9 @@
 <body>
 
     <div class="app">
-
-        <!-- OVERLAY! -->
-        <!-- 
-        <div class="overlay">
-            <h1>Start by typing a link into the text box!</h1>
-        </div> -->
-
-        <div class="container">
+t        <div class="container">
 
             <div class="header">
-
-                <!-- HISTORY! -->
-                <!-- <h3>{{history}}</h3> -->
-
-
-
                 <div class="form-group">
 
                     <div class="row">
@@ -63,7 +50,7 @@
                         <h6>Nicer version for your eyes to see</h6>
                         <ul>
                             <li v-for='item in Object.keys(api_body)'>
-                                <span class="key">{{item}}</span>:
+                                <span class="key">{{item}} [{{typeof api_body[item]}}]</span>:
                                 <br>
                                 {{api_body[item]}}
                             </li>
