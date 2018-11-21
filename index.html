@@ -23,18 +23,29 @@
                 </div>
             </div>
 
-            <h3>Body</h3>
-            <pre><code>{{apidata.body}}</code></pre>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="body-wrapper">
+                        <h3>Body</h3>
+                        <pre><code>{{apidata.body}}</code></pre>
+                    </div>
+                </div>
 
 
-            <h3>Nicer Version:</h3>
-            <ul>
-                <li v-for='item in Object.keys(apidata.body)'>
-                    <span class="key">{{item}}</span>:
-                    <br>
-                    {{apidata.body[item]}}
-                </li>
-            </ul>
+                <div class="col-lg-6">
+                    <div class="nicer-version-wrapper">
+                        <h3>Nicer Version:</h3>
+                        <ul>
+                            <li v-for='item in Object.keys(apidata.body)'>
+                                <span class="key">{{item}}</span>:
+                                <br>
+                                {{apidata.body[item]}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
