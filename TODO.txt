@@ -1,0 +1,5 @@
+[VERSION 2.00] [COMING SOON...]
+-   Handle failed fetch requests
+-   Let users browse through individual keys(so they can go in into nested keys)
+-   Syntax highlighting for json [?]
+-   Site UI Changes
