@@ -18,8 +18,20 @@
 
             <div class="header">
                 <div class="form-group">
-                    <input type="text" v-model='url' class="form-control">
-                    <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
+
+                    <div class="row">
+
+                        <div class="col-lg-10">
+                            <input type="text" v-model='url' class="form-control">
+                        </div>
+
+                        <div class="col-lg-2">
+                            <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
 
