@@ -13,31 +13,17 @@
 <body>
 
     <div class="app">
+        
         <div class="container">
-
-            <div class="header">
-                <div class="form-group">
-
-                    <div class="row">
-
-                        <!-- URL BOX -->
-                        <div class="col-lg-10">
-                            <input type="text" v-model='url' class="form-control" placeholder="Type in a link">
-                        </div>
-
-                        <!-- GET BUTTON -->
-                        <div class="col-lg-2">
-                            <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
-                        </div>
-
-                    </div>
-
-
-                </div>
+        <div class="header">
+            <div class="form-group">
+                <!-- URL BOX -->
+                <input @input='getApi(url)' type="text" v-model='url' class="form-control customform" placeholder="Type in a link">
             </div>
+        </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="body-wrapper">
                         <h3>Body</h3>
                         <h6>Raw Body</h6>
@@ -51,7 +37,7 @@
                 </div>
 
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="nicer-version-wrapper">
                         <h3>Niceify:</h3>
                         <h6>Nicer version for your eyes to see</h6>
@@ -74,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <div class="history-wrapper">
                         <h3>History:</h3>
                         <h6>Click on any of the links to make a request to that link</h6>
@@ -84,7 +70,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 

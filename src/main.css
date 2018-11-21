@@ -6,6 +6,15 @@ body{
     color: white !important;
 }
 
+.customform{
+    background: #222222;
+    border: 0;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700; 
+    padding: 40px 0;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-weight: 700;
 }
@@ -14,10 +23,6 @@ pre , code{
     font-family: 'IBM Plex Mono', monospace;
     color: white !important;
 
-}
-
-.header{
-    margin-top: 20px;
 }
 
 .key{
