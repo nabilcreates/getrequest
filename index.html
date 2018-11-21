@@ -50,9 +50,14 @@ t        <div class="container">
                         <h6>Nicer version for your eyes to see</h6>
                         <ul>
                             <li v-for='item in Object.keys(api_body)'>
+                                <!-- KEY -->
                                 <span class="key">{{item}} [{{typeof api_body[item]}}]</span>:
                                 <br>
-                                {{api_body[item]}}
+
+                                <!-- ITEM ITSELF -->
+                                <span @click='getApi(api_body[item])'>
+                                    {{api_body[item]}}
+                                </span>
                             </li>
                         </ul>
                     </div>
