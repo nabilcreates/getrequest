@@ -1,1 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,500,600,700);body{font-family:'IBM Plex Sans',sans-serif;background:#161616;color:white!important}.customform{background:#222;border:0;font-size:30px;font-family:'IBM Plex Sans',sans-serif;font-weight:700;padding:40px 0}h1,h2,h3,h4,h5,h6{font-weight:700}pre,code{font-family:'IBM Plex Mono',monospace;color:white!important}.key{font-weight:700}li{padding:5px 0}
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,500,600,700');body{font-family:'IBM Plex Sans',sans-serif;background:#161616;color:white!important}.form-group,.customform{background:#222222;border:0;font-size:30px;font-family:'IBM Plex Sans',sans-serif;font-weight:700;padding:40px 0}
+h1,h2,h3,h4,h5,h6{font-weight:700}
+pre,code{font-family:'IBM Plex Mono',monospace;color:white!important}.key{font-weight:700}
+li{padding:5px 0}

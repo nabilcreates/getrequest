@@ -13,54 +13,55 @@
 <body>
 
     <div class="app">
-        
-        <div class="container">
+
         <div class="header">
             <div class="form-group">
-                <!-- URL BOX -->
-                <input @input='getApi(url)' type="text" v-model='url' class="form-control customform" placeholder="Type in a link">
+                <div class="container">
+                    <!-- URL BOX -->
+                    <input @input='getApi(url)' type="text" v-model='url' class="form-control customform" placeholder="Type in a link">
+                </div>
             </div>
-        </div>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="body-wrapper">
-                        <h3>Body</h3>
-                        <h6>Raw Body</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="body-wrapper">
+                            <h3>Body</h3>
+                            <h6>Raw Body</h6>
 
-                        <!-- SEARCH FOR SPECIFIC KEY -->
-                        <!-- <input type="text" v-model='specifickey' class="form-control" placeholder="Specific Key"> -->
+                            <!-- SEARCH FOR SPECIFIC KEY -->
+                            <!-- <input type="text" v-model='specifickey' class="form-control" placeholder="Specific Key"> -->
 
-                        <pre><code>{{api_body}}</code></pre>
+                            <pre><code>{{api_body}}</code></pre>
 
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="col-lg-6">
-                    <div class="nicer-version-wrapper">
-                        <h3>Niceify:</h3>
-                        <h6>Nicer version for your eyes to see</h6>
+                    <div class="col-lg-6">
+                        <div class="nicer-version-wrapper">
+                            <h3>Niceify:</h3>
+                            <h6>Nicer version for your eyes to see</h6>
 
-                        <!-- SEARCH? -->
-                        <input type="text" v-model='keysearch' class="form-control" placeholder="Key Search">
+                            <!-- SEARCH? -->
+                            <input type="text" v-model='keysearch' class="form-control" placeholder="Key Search">
 
-                        <ul>
-                            <li v-for='item in filteredSearch'>
-                                <!-- KEY -->
-                                <span class="key">{{item}} [{{typeof api_body[item]}}]</span>:
-                                <br>
+                            <ul>
+                                <li v-for='item in filteredSearch'>
+                                    <!-- KEY -->
+                                    <span class="key">{{item}} [{{typeof api_body[item]}}]</span>:
+                                    <br>
 
-                                <!-- ITEM ITSELF -->
-                                <span @click='getApi(api_body[item])'>
-                                    {{api_body[item]}}
-                                </span>
-                            </li>
-                        </ul>
+                                    <!-- ITEM ITSELF -->
+                                    <span @click='getApi(api_body[item])'>
+                                        {{api_body[item]}}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <!-- <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                     <div class="history-wrapper">
                         <h3>History:</h3>
                         <h6>Click on any of the links to make a request to that link</h6>
@@ -72,16 +73,16 @@
                     </div>
                 </div> -->
 
+                </div>
+
             </div>
+
+
 
         </div>
 
-
-
-    </div>
-
-    <script src="./node_modules/vue/dist/vue.js"></script>
-    <script src="main.min.js"></script>
+        <script src="./node_modules/vue/dist/vue.js"></script>
+        <script src="main.min.js"></script>
 </body>
 
 </html>

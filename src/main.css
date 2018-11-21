@@ -6,7 +6,7 @@ body{
     color: white !important;
 }
 
-.customform{
+.form-group , .customform{
     background: #222222;
     border: 0;
     font-size: 30px;
