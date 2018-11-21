@@ -6,6 +6,7 @@ let app = new Vue({
             api_body: {},
             history: [],
             bodyoptions: '',
+            keysearch: '',
         }
     },
 
@@ -27,6 +28,14 @@ let app = new Vue({
 
             this.history.push(link)
 
+        }
+    },
+
+    computed:{
+        filteredSearch: function(){
+            return Object.keys(this.api_body).filter((data)=>{
+                return data.match(this.keysearch)
+            })
         }
     },
 

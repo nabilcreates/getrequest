@@ -13,7 +13,7 @@
 <body>
 
     <div class="app">
-t        <div class="container">
+        <div class="container">
 
             <div class="header">
                 <div class="form-group">
@@ -48,8 +48,12 @@ t        <div class="container">
                     <div class="nicer-version-wrapper">
                         <h3>Niceify:</h3>
                         <h6>Nicer version for your eyes to see</h6>
+
+                        <!-- SEARCH? -->
+                        <input type="text" v-model='keysearch' class="form-control" placeholder="Key Search">
+                        
                         <ul>
-                            <li v-for='item in Object.keys(api_body)'>
+                            <li v-for='item in filteredSearch'>
                                 <!-- KEY -->
                                 <span class="key">{{item}} [{{typeof api_body[item]}}]</span>:
                                 <br>
