@@ -14,15 +14,27 @@
 
     <div class="app">
 
+        <!-- OVERLAY! -->
+<!-- 
+        <div class="overlay">
+            <h1>Start by typing a link into the text box!</h1>
+        </div> -->
+
         <div class="container">
 
             <div class="header">
+
+                <!-- HISTORY! -->
+                <!-- <h3>{{history}}</h3> -->
+
+
+
                 <div class="form-group">
 
                     <div class="row">
 
                         <div class="col-lg-10">
-                            <input type="text" v-model='url' class="form-control">
+                            <input type="text" v-model='url' class="form-control" placeholder="Type in a link">
                         </div>
 
                         <div class="col-lg-2">
@@ -39,7 +51,7 @@
                 <div class="col-lg-6">
                     <div class="body-wrapper">
                         <h3>Body</h3>
-                        <pre><code>{{apidata.body}}</code></pre>
+                        <pre><code>{{api_body}}</code></pre>
                     </div>
                 </div>
 
@@ -48,10 +60,10 @@
                     <div class="nicer-version-wrapper">
                         <h3>Nicer Version:</h3>
                         <ul>
-                            <li v-for='item in Object.keys(apidata.body)'>
+                            <li v-for='item in Object.keys(api_body)'>
                                 <span class="key">{{item}}</span>:
                                 <br>
-                                {{apidata.body[item]}}
+                                {{api_body[item]}}
                             </li>
                         </ul>
                     </div>

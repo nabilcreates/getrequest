@@ -2,10 +2,10 @@ let app = new Vue({
     el: ".app",
     data() {
         return {
-            url: 'https://api.github.com/users/renabil',
-            apidata: {
-                body: '',
-            }
+            url: '',
+            api_body: {},
+            history: [],
+            bodyoptions: '',
         }
     },
 
@@ -13,22 +13,28 @@ let app = new Vue({
         getApi(link, options = {
             method: 'GET',
         }) {
-            
+
             // if http found in link
-            if(link.indexOf('http') >= 0){
+            if (link.indexOf('http') >= 0) {
                 fetch(`${link}`, options)
-                .then(response => response.json())
-                .then(json => this.apidata.body = json)
-            }else{
+                    .then(response => response.json())
+                    .then(json => this.api_body = json)
+            } else {
                 fetch(`https://${link}`, options)
-                .then(response => response.json())
-                .then(json => this.apidata.body = json)
+                    .then(response => response.json())
+                    .then(json => this.api_body = json)
             }
-            
+
+            this.history.push(link)
+
         }
     },
 
-    created() {
-        this.getApi(this.url)
+    created(){
+        this.url = `https://swapi.co/api/people/${Math.floor(Math.random() * 40)}/`
+        this.getApi(this.url,{
+            method: 'GET',
+        })
     }
+
 })
