@@ -7,6 +7,7 @@ let app = new Vue({
             history: [],
             bodyoptions: '',
             keysearch: '',
+            specifickey: '',
         }
     },
 

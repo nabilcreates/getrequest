@@ -20,10 +20,12 @@
 
                     <div class="row">
 
+                        <!-- URL BOX -->
                         <div class="col-lg-10">
                             <input type="text" v-model='url' class="form-control" placeholder="Type in a link">
                         </div>
 
+                        <!-- GET BUTTON -->
                         <div class="col-lg-2">
                             <button class="btn btn-warning btn-block" @click='getApi(url,{method:"GET"})'>GET</button>
                         </div>
@@ -39,7 +41,12 @@
                     <div class="body-wrapper">
                         <h3>Body</h3>
                         <h6>Raw Body</h6>
+
+                        <!-- SEARCH FOR SPECIFIC KEY -->
+                        <!-- <input type="text" v-model='specifickey' class="form-control" placeholder="Specific Key"> -->
+
                         <pre><code>{{api_body}}</code></pre>
+
                     </div>
                 </div>
 
@@ -51,7 +58,7 @@
 
                         <!-- SEARCH? -->
                         <input type="text" v-model='keysearch' class="form-control" placeholder="Key Search">
-                        
+
                         <ul>
                             <li v-for='item in filteredSearch'>
                                 <!-- KEY -->
