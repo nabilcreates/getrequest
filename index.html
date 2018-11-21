@@ -15,7 +15,7 @@
     <div class="app">
 
         <!-- OVERLAY! -->
-<!-- 
+        <!-- 
         <div class="overlay">
             <h1>Start by typing a link into the text box!</h1>
         </div> -->
@@ -48,22 +48,36 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="body-wrapper">
                         <h3>Body</h3>
+                        <h6>Raw Body</h6>
                         <pre><code>{{api_body}}</code></pre>
                     </div>
                 </div>
 
 
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="nicer-version-wrapper">
-                        <h3>Nicer Version:</h3>
+                        <h3>Niceify:</h3>
+                        <h6>Nicer version for your eyes to see</h6>
                         <ul>
                             <li v-for='item in Object.keys(api_body)'>
                                 <span class="key">{{item}}</span>:
                                 <br>
                                 {{api_body[item]}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="history-wrapper">
+                        <h3>History:</h3>
+                        <h6>Click any of the links to make a request to the link</h6>
+                        <ul>
+                            <li @click='getApi(h)' v-for='h in history'>
+                                {{h}}
                             </li>
                         </ul>
                     </div>
