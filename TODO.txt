@@ -3,3 +3,4 @@
 -   Let users browse through individual keys(so they can go in into nested keys)
 -   Syntax highlighting for json [?]
 -   Site UI Changes
+-   Let users click on a link (within the keys) and it will make a get request to that link
